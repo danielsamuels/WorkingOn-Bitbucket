@@ -1,7 +1,7 @@
 chrome.storage.sync.get({
     token: ''
 }, function(items) {
-  var task = $('.entity-name').html() + " - " + $('.issue-id').html().trim();
+  var task = $('.entity-name').html() + " - " + $('.issue-id').html().trim() + ' (' + $('#issue-title').html() + ')';
 
   var new_button = $('<a />', {
     "id": "change-state",
@@ -9,7 +9,7 @@ chrome.storage.sync.get({
     "href": "#",
     "title": "WorkingOn this",
     "target": "_blank",
-  }).html("WorkingOn This").on('click', function() {
+  }).html("WorkingOn this").on('click', function() {
     $.get("https://api.workingon.co/hooks/incoming?token=" + items.token + "&source=bookmarklet&task=" + encodeURIComponent(task))
     return false;
   });
