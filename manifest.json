@@ -3,7 +3,7 @@
 
   "name": "WorkingOn Bitbucket integration",
   "description": "This extension adds a WorkingOn button to a Bitbucket issue page.",
-  "version": "1.0",
+  "version": "1.0.1",
   "content_scripts": [
     {
       "all_frames": true,
